@@ -1,0 +1,9 @@
+printversion:
+  image: jruby:1.7.24
+  command: ruby -v
+server:
+  image: jruby:1.7.24
+  volumes:
+    - .:/home
+  working_dir: /home
+  command:  ruby scripts/server.rb
